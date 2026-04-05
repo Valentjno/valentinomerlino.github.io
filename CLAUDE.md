@@ -20,10 +20,20 @@ This site should remain lightweight and easy to host as plain static files.
 - Fonts: Inter from Google Fonts CDN
 
 # Project Structure
-- `index.html` is the main entry point
-- Additional pages should be plain `.html` files
-- Keep the structure simple and flat unless there is a strong reason to add folders
-- Avoid introducing tooling, bundlers, preprocessors, or frameworks
+
+## File Architecture
+- `index.html` — Landing page (hero + concise intro + expertise areas)
+- `about.html` — Responsible AI focus, background, approach
+- `work.html` — Red-teaming methodologies, ISO 42001 governance, projects
+- `research.html` — Academic research, OWASP AI Exchange contribution, focus areas
+- `contact.html` — Contact form (Formspree) + email/LinkedIn links
+
+## Technical Structure
+- Single-file HTML files (no folders, no bundler)
+- Embedded CSS in `<style>` tag (organized by component)
+- Embedded vanilla JS in `<script>` tag
+- Consistent header/footer on all pages
+- Responsive breakpoints: 768px (tablet), 480px (mobile)
 
 # Code Style
 - Write semantic HTML first
@@ -42,11 +52,12 @@ This site should remain lightweight and easy to host as plain static files.
 - Make sure the site feels personal, confident, and intentional
 
 # Content Rules
-- Copy should be concise, human, and specific
-- Avoid buzzwords, filler, and exaggerated marketing language
-- Emphasize clarity over cleverness
-- Each section should have a clear purpose
-- Personal bio, work, links, and contact info should be easy to find
+- **Concise first:** Short sentences, bullet points, no filler
+- **Professional tone:** Precise, credible, technical but accessible
+- **Specific over generic:** Mention ISO 42001, OWASP, University of Catania, actual roles
+- **Action-oriented:** Show what you do, not abstract philosophy
+- **Scannable:** Use headings, white space, short paragraphs
+- **Avoid:** Marketing jargon, repetition, verbose explanations, placeholder copy
 
 # Accessibility Rules
 - Use semantic landmarks: `header`, `main`, `nav`, `section`, `footer`
@@ -106,39 +117,75 @@ Common sections to consider:
 # Personal Branding
 This is the personal website of Valentino Merlino.
 The site should position him as:
-- an AI security and Responsible AI professional
-- an AI Red Team practitioner
-- a PhD candidate at the University of Catania
-- someone combining industry work with research
+- **ISO 42001 Implementer** — AI governance and risk management frameworks (primary)
+- **Responsible AI Practitioner** — Security-first approach to AI development
+- **Red Team Specialist** — Adversarial testing and vulnerability assessment
+- **Security Researcher** — PhD candidate at University of Catania, OWASP AI Exchange contributor
 
 When writing copy:
-- keep the tone precise, credible, and technical but approachable
-- emphasize AI security, red teaming, Responsible AI, and research
-- avoid generic startup-style marketing language
-- prefer concrete evidence such as role, institution, and publication topics
-Prefer reusable section patterns, but keep implementation simple.
+- Keep tone professional, precise, and technical but accessible
+- Lead with ISO 42001 and Responsible AI governance expertise
+- Emphasize practical security implementation, not theory alone
+- Avoid startup jargon; use concrete examples and credentials
+- Concise and scannable (not verbose)
 
 # Fonts
 Use Inter via Google Fonts CDN unless explicitly changed.
 
-# Color Palette
-From the design reference, use these colors:
-- Background: `#F2F2F2` (light gray)
-- Text: `#000000` (black)
-- Accent colors available: `#abb8c3` (cyan-bluish-gray), `#f78da7` (pale-pink), `#9b51e0` (vivid-purple), `#00d084` (vivid-green-cyan)
-- Use a restrained palette - prefer 2-3 main colors per page
+# Design System
+
+## CSS Variables
+All colors and common values are defined in `:root` CSS variables (no hardcoded colors):
+
+```css
+--color-black: #000000
+--color-white: #ffffff
+--color-pale-pink: #f78da7 (accent)
+--color-vivid-purple: #9b51e0
+--color-vivid-green: #00d084
+--bg-light: #F2F2F2
+--bg-dark: #1a1a1a
+--color-border: #ddd
+--color-text-muted: #666
+```
+
+## Color Palette
+- **Background:** `#F2F2F2` (light gray)
+- **Text:** `#000000` (black)
+- **Accent:** `#f78da7` (pale-pink) — use sparingly, hover states only
+- **Secondary accents:** purple, green (available but rarely used)
+- **Rule:** Restrained palette, 2-3 main colors per page
 
 # Deployment
-This site must stay deployable as plain static files with no build step.
-Any solution should work when the repository is served directly by static hosting.
+
+## GitHub Pages Setup
+- Repository: `valentjno.github.io` (must match GitHub username)
+- Live URL: `https://valentjno.github.io`
+- Branch: `main`, folder: `/` (root)
+- No build step required (static files only)
+
+## Deployment Workflow
+```bash
+# Make changes, then:
+git add -A
+git commit -m "describe: your changes here"
+git push origin main
+
+# Site updates automatically within 1-2 minutes
+```
+
+## Contact Form (Formspree)
+- Form action: `https://formspree.io/f/mwvwwagq`
+- Emails go to: `valentinomerlino@protonmail.com`
+- **To change:** Set up new Formspree form, update action URL in `contact.html`
 
 ## Notes
 
 - Keep the single-file architecture — no bundlers or build steps
 - Maintain the squared corner aesthetic (no pills)
-- Test scroll animations after content changes
-- Counter animations trigger on scroll into view
-- **index.html is the main landing page** — don't overwrite with feature content
+- Animations use fade-in on scroll (minimal, purposeful)
+- **index.html is the main landing page** — keep concise and professional
+- Update contact details in footer when credentials change
 
 # Instructions for Claude
 When making changes:
