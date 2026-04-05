@@ -200,43 +200,49 @@
         }
         
         .header-text h1 {
-            font-size: 14px;
-            font-weight: 400;
-            margin-bottom: 20px;
+            font-size: 2.4rem;
+            font-weight: 700;
+            margin-bottom: 12px;
             letter-spacing: 0px;
             animation: fadeInLeft 0.8s ease-out;
         }
-        
+
         .header-intro {
-            font-size: 18px;
-            line-height: 1.7;
-            max-width: 280px;
-            margin-bottom: 40px;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1.6;
+            max-width: 400px;
+            margin-bottom: 20px;
             animation: fadeInLeft 0.8s ease-out 0.1s both;
-            position: relative;
-            padding-bottom: 15px;
+            color: var(--color-text-muted);
         }
-        
-        .header-intro::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(90deg, var(--color-pale-pink), var(--color-vivid-purple));
-            animation: expandWidth 0.8s ease-out 0.5s forwards;
-        }
-        
-        .header-contact {
-            font-size: 12px;
-            line-height: 1.8;
+
+        .header-tagline {
+            font-size: 14px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            color: var(--color-text-muted);
             animation: fadeInLeft 0.8s ease-out 0.2s both;
         }
         
-        .header-contact a {
-            display: block;
-            margin-bottom: 8px;
+        .btn-primary {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 30px;
+            background-color: var(--color-pale-pink);
+            color: var(--color-black);
+            font-size: 12px;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            animation: fadeInLeft 0.8s ease-out 0.3s both;
+        }
+
+        .btn-primary:hover {
+            background-color: #f06690;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(247, 141, 167, 0.2);
         }
         
         .header-visual {
@@ -249,42 +255,30 @@
             overflow: visible;
         }
         
-        .geometric-art {
+        .hero-image {
             width: 280px;
             height: 280px;
+            border-radius: 4px;
+            object-fit: cover;
+            animation: fadeInRight 0.8s ease-out;
         }
         
         .scroll-explore {
             position: absolute;
-            right: -50px;
-            top: 50%;
-            transform: translateY(-50%);
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            gap: 12px;
-            margin-left: 40px;
-            overflow: visible;
+            bottom: -50px;
+            left: 50%;
+            transform: translateX(-50%);
             z-index: 10;
-        }
-        
-        .scroll-anim {
-            font-size: 12px;
-            font-weight: 400;
-            color: var(--color-text-muted);
-            white-space: nowrap;
-            opacity: 0;
-            transform: translateX(30px);
-            position: relative;
-            z-index: 10;
-            transition: all 0.3s ease;
         }
 
-        .scroll-anim.sa1 { animation: slideInLeft 0.6s ease-out 0.3s forwards; }
-        .scroll-anim.sa2 { animation: slideInLeft 0.6s ease-out 0.45s forwards; }
-        .scroll-anim.sa3 { animation: slideInLeft 0.6s ease-out 0.6s forwards; }
-        .scroll-anim.sa4 { animation: slideInLeft 0.6s ease-out 0.75s forwards; }
-        .scroll-anim.sa5 { animation: slideInLeft 0.6s ease-out 0.9s forwards; }
+        .scroll-anim {
+            font-size: 12px;
+            color: var(--color-text-muted);
+            font-weight: 400;
+            opacity: 0;
+            animation: fadeInUp 0.6s ease-out 0.8s forwards;
+            text-align: center;
+        }
 
         @keyframes slideInLeft {
             from {
@@ -352,7 +346,7 @@
         .nav-tab:last-child {
             border-right: none;
         }
-        
+
         .nav-tab h3 {
             font-size: 14px;
             font-weight: 600;
@@ -360,17 +354,57 @@
             text-transform: lowercase;
             cursor: pointer;
         }
-        
+
         .nav-tab ul {
             list-style: none;
             cursor: pointer;
         }
-        
+
         .nav-tab li {
             font-size: 12px;
             margin-bottom: 8px;
             line-height: 1.5;
             cursor: pointer;
+        }
+
+        /* Navigation Cards */
+        .nav-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 40px;
+        }
+
+        .nav-card {
+            padding: 30px;
+            background-color: var(--color-white);
+            border: 1px solid var(--color-border);
+            border-radius: 4px;
+            display: block;
+            text-decoration: none;
+            color: var(--color-black);
+            transition: all 0.3s ease;
+            animation: fadeInUp 0.8s ease-out backwards;
+        }
+
+        .nav-card:hover {
+            border-color: var(--color-pale-pink);
+            box-shadow: 0 8px 24px rgba(247, 141, 167, 0.1);
+            transform: translateY(-4px);
+        }
+
+        .nav-card h3 {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .nav-card p {
+            font-size: 12px;
+            color: var(--color-text-muted);
+            line-height: 1.6;
         }
         
         /* Main Content */
@@ -522,21 +556,28 @@
                 grid-template-columns: 1fr;
                 gap: 40px;
             }
-            
+
+            .nav-cards {
+                grid-template-columns: 1fr;
+                gap: 16px;
+                margin: 40px auto;
+                padding: 0 24px;
+            }
+
             .nav-tabs {
                 grid-template-columns: 1fr;
             }
-            
+
             .nav-tab {
                 padding: 20px 24px;
                 border-right: none;
                 border-bottom: 1px solid var(--color-border);
             }
-            
+
             .nav-tab:last-child {
                 border-bottom: none;
             }
-            
+
             main {
                 padding: 40px 24px;
             }
@@ -545,16 +586,16 @@
                 grid-template-columns: 1fr;
                 gap: 24px;
             }
-            
+
             .header-visual {
                 min-height: 200px;
             }
-            
-            .geometric-art {
+
+            .hero-image {
                 width: 200px;
                 height: 200px;
             }
-            
+
             .footer-profile img {
                 width: 150px;
                 height: 150px;
@@ -565,40 +606,59 @@
             body {
                 font-size: 14px;
             }
-            
+
             header {
                 padding: 30px 16px;
             }
-            
+
             .header-intro {
                 font-size: 16px;
             }
-            
+
+            .nav-cards {
+                grid-template-columns: 1fr;
+                gap: 12px;
+                margin: 30px auto;
+                padding: 0 16px;
+            }
+
+            .nav-card {
+                padding: 20px;
+            }
+
+            .nav-card h3 {
+                font-size: 13px;
+            }
+
+            .nav-card p {
+                font-size: 11px;
+            }
+
             .nav-tabs {
                 grid-template-columns: 1fr;
             }
-            
+
             main {
                 padding: 30px 16px;
             }
-            
+
             section {
                 gap: 16px;
             }
-            
+
             section h2 {
                 font-size: 11px;
             }
-            
+
             .section-content p {
                 font-size: 13px;
             }
-            
+
             .header-visual {
                 min-height: 160px;
             }
-            
-            .geometric-art {
+
+            .hero-image {
                 width: 160px;
                 height: 160px;
             }
@@ -627,75 +687,33 @@
     <header>
         <div class="header-content">
             <div class="header-text">
-                <h1>Hello,</h1>
-                <p class="header-intro">I am Valentino Merlino — AI security researcher and red teamer specializing in Responsible AI and adversarial testing.</p>
-                <div class="header-contact">
-                    <a href="mailto:valentino@example.com">valentino@example.com</a>
-                    <a href="tel:+1234567890">+1 (234) 567-890</a>
-                </div>
+                <h1>Hello, I'm Valentino Merlino</h1>
+                <p class="header-intro">AI security researcher | Red teaming | Responsible AI</p>
+                <p class="header-tagline">Building safer AI through rigorous security research and red-teaming</p>
+                <a href="contact.html" class="btn-primary">Get in touch</a>
             </div>
             <div class="header-visual">
-                <svg class="geometric-art" viewBox="0 0 280 280" xmlns="http://www.w3.org/2000/svg">
-                    <g stroke="#f78da7" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <!-- Central geometric form -->
-                        <path d="M140 20 L180 80 L160 120 L140 100 L120 120 L100 80 Z" />
-                        <path d="M140 100 L180 140 L200 200 L140 220 L80 200 L100 140 Z" />
-                        <path d="M80 80 L100 120 L80 140 L60 100 Z" />
-                        <path d="M200 80 L220 120 L200 140 L180 100 Z" />
-                        <!-- Connection lines -->
-                        <line x1="140" y1="20" x2="180" y2="80" />
-                        <line x1="140" y1="20" x2="100" y2="80" />
-                        <line x1="180" y1="80" x2="220" y2="120" />
-                        <line x1="100" y1="80" x2="60" y2="100" />
-                        <line x1="140" y1="100" x2="200" y2="200" />
-                        <line x1="140" y1="100" x2="80" y2="200" />
-                        <line x1="180" y1="140" x2="200" y2="200" />
-                        <line x1="100" y1="140" x2="80" y2="200" />
-                        <line x1="180" y1="80" x2="160" y2="120" />
-                        <line x1="100" y1="80" x2="120" y2="120" />
-                        <line x1="200" y1="200" x2="140" y2="220" />
-                        <line x1="80" y1="200" x2="140" y2="220" />
-                    </g>
-                </svg>
+                <img src="https://via.placeholder.com/280x280/f2f2f2/000000?text=Professional+Photo" alt="Valentino Merlino - AI Security Researcher" class="hero-image" />
                 <div class="scroll-explore">
-                    <p class="scroll-anim sa1">scroll&nbsp;&amp;&nbsp;explore</p>
-                    <p class="scroll-anim sa2">scroll&nbsp;&amp;&nbsp;explore</p>
-                    <p class="scroll-anim sa3">scroll&nbsp;&amp;&nbsp;explore</p>
-                    <p class="scroll-anim sa4 hide-mobile">scroll&nbsp;&amp;&nbsp;explore</p>
-                    <p class="scroll-anim sa5 hide-mobile">scroll&nbsp;&amp;&nbsp;explore</p>
+                    <p class="scroll-anim">scroll to explore</p>
                 </div>
             </div>
         </div>
     </header>
     
-    <!-- Navigation Tabs -->
-    <div class="nav-tabs">
-        <a href="about.html" class="nav-tab">
-            <h3>about</h3>
-            <ul>
-                <li>AI Security</li>
-                <li>Red Teaming</li>
-                <li>Responsible AI</li>
-                <li>Research</li>
-            </ul>
+    <!-- Navigation Cards -->
+    <div class="nav-cards">
+        <a href="about.html" class="nav-card">
+            <h3>About</h3>
+            <p>Learn about my background, approach, and what drives my work</p>
         </a>
-        <a href="work.html" class="nav-tab">
-            <h3>work</h3>
-            <ul>
-                <li>Security Research</li>
-                <li>Threat Assessment</li>
-                <li>Policy Development</li>
-                <li>Publications</li>
-            </ul>
+        <a href="work.html" class="nav-card">
+            <h3>Work & Research</h3>
+            <p>Red-teaming, threat assessment, and AI security research</p>
         </a>
-        <a href="research.html" class="nav-tab">
-            <h3>talk</h3>
-            <ul>
-                <li>Speaking</li>
-                <li>Collaborations</li>
-                <li>University of Catania</li>
-                <li>Contact</li>
-            </ul>
+        <a href="contact.html" class="nav-card">
+            <h3>Contact</h3>
+            <p>Reach out about opportunities, collaborations, or projects</p>
         </a>
     </div>
     
@@ -771,21 +789,18 @@
             });
         }, observerOptions);
         
-        // Observe nav tabs and section paragraphs
-        document.querySelectorAll('.nav-tab, .section-content p').forEach(el => {
+        // Observe nav cards and section paragraphs
+        document.querySelectorAll('.nav-card, .section-content p').forEach(el => {
             el.style.opacity = '0';
             observer.observe(el);
         });
-        
-        // Parallax effect on scroll
-        window.addEventListener('scroll', () => {
-            const scrollAmount = window.scrollY;
-            const geometric = document.querySelector('.geometric-art');
-            if (geometric) {
-                geometric.style.transform = `translateY(${scrollAmount * 0.1}px) scale(${1 + scrollAmount * 0.0005})`;
-            }
-        }, { passive: true });
-        
+
+        // Add stagger animation to nav cards
+        const navCards = document.querySelectorAll('.nav-card');
+        navCards.forEach((card, index) => {
+            card.style.animationDelay = `${index * 0.15}s`;
+        });
+
         // Smooth scroll for navigation
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -795,12 +810,6 @@
                     target.scrollIntoView({ behavior: 'smooth' });
                 }
             });
-        });
-        
-        // Add stagger animation to nav tabs
-        const navTabs = document.querySelectorAll('.nav-tab');
-        navTabs.forEach((tab, index) => {
-            tab.style.animationDelay = `${index * 0.15}s`;
         });
     </script>
 </body>
