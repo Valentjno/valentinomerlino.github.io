@@ -91,7 +91,102 @@
         a:hover {
             opacity: 0.7;
         }
-        
+
+        /* Navigation Header */
+        .nav-header {
+            padding: 30px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            border-bottom: 1px solid var(--color-border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .nav-header-logo {
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 0.05em;
+        }
+
+        .nav-header-logo a {
+            display: inline-block;
+            color: var(--color-black);
+            text-decoration: none;
+            transition: opacity 0.2s ease;
+        }
+
+        .nav-header-logo a:hover {
+            opacity: 0.7;
+        }
+
+        .nav-header-nav {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            font-size: 12px;
+        }
+
+        .nav-header-nav a {
+            color: var(--color-black);
+            text-decoration: none;
+            transition: opacity 0.2s ease;
+            position: relative;
+        }
+
+        .nav-header-nav a:hover {
+            opacity: 0.6;
+        }
+
+        .nav-header-nav a.active {
+            text-decoration: underline;
+        }
+
+        .nav-header-linkedin {
+            margin-left: 15px;
+            padding-left: 15px;
+            border-left: 1px solid var(--color-border);
+        }
+
+        .nav-header-linkedin a {
+            display: inline-flex;
+            align-items: center;
+            font-size: 13px;
+        }
+
+        @media (max-width: 768px) {
+            .nav-header {
+                padding: 24px;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .nav-header-nav {
+                gap: 20px;
+                font-size: 11px;
+                width: 100%;
+                flex-wrap: wrap;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-header {
+                padding: 20px 16px;
+            }
+
+            .nav-header-nav {
+                gap: 12px;
+            }
+
+            .nav-header-linkedin {
+                margin-left: 0;
+                padding-left: 0;
+                border-left: none;
+            }
+        }
+
         /* Header */
         header {
             padding: 60px 40px;
@@ -414,7 +509,7 @@
             header {
                 padding: 40px 24px;
             }
-            
+
             .header-content {
                 grid-template-columns: 1fr;
                 gap: 40px;
@@ -503,6 +598,23 @@
     </style>
 </head>
 <body>
+    <!-- Navigation Header -->
+    <div class="nav-header">
+        <div class="nav-header-logo">
+            <a href="index.html">VM</a>
+        </div>
+        <nav class="nav-header-nav">
+            <a href="index.html">home</a>
+            <a href="about.html">about</a>
+            <a href="work.html">work</a>
+            <a href="research.html">research</a>
+            <a href="contact.html">contact</a>
+            <div class="nav-header-linkedin">
+                <a href="https://www.linkedin.com/in/valentinomerlino" target="_blank" title="LinkedIn">LinkedIn ↗</a>
+            </div>
+        </nav>
+    </div>
+
     <!-- Header -->
     <header>
         <div class="header-content">
