@@ -21,6 +21,8 @@
             --color-vivid-green: #00d084;
             --bg-light: #F2F2F2;
             --bg-dark: #1a1a1a;
+            --color-border: #ddd;
+            --color-text-muted: #666;
         }
 
         * {
@@ -179,20 +181,21 @@
         .scroll-anim {
             font-size: 12px;
             font-weight: 400;
-            color: #666;
+            color: var(--color-text-muted);
             white-space: nowrap;
             opacity: 0;
             transform: translateX(30px);
             position: relative;
             z-index: 10;
+            transition: all 0.3s ease;
         }
-        
+
         .scroll-anim.sa1 { animation: slideInLeft 0.6s ease-out 0.3s forwards; }
         .scroll-anim.sa2 { animation: slideInLeft 0.6s ease-out 0.45s forwards; }
         .scroll-anim.sa3 { animation: slideInLeft 0.6s ease-out 0.6s forwards; }
         .scroll-anim.sa4 { animation: slideInLeft 0.6s ease-out 0.75s forwards; }
         .scroll-anim.sa5 { animation: slideInLeft 0.6s ease-out 0.9s forwards; }
-        
+
         @keyframes slideInLeft {
             from {
                 opacity: 0;
@@ -203,7 +206,7 @@
                 transform: translateX(0);
             }
         }
-        
+
         @keyframes expandWidth {
             from {
                 width: 0;
@@ -211,10 +214,6 @@
             to {
                 width: 80px;
             }
-        }
-        
-        .scroll-anim {
-            transition: all 0.3s ease;
         }
 
         .scroll-anim:hover {
@@ -238,13 +237,13 @@
             gap: 0;
             max-width: 1200px;
             margin: 0 auto;
-            border-top: 1px solid #ddd;
-            border-bottom: 1px solid #ddd;
+            border-top: 1px solid var(--color-border);
+            border-bottom: 1px solid var(--color-border);
         }
         
         .nav-tab {
             padding: 30px 40px;
-            border-right: 1px solid #ddd;
+            border-right: 1px solid var(--color-border);
             animation: fadeInUp 0.8s ease-out backwards;
             display: block;
             color: var(--color-black);
@@ -428,7 +427,7 @@
             .nav-tab {
                 padding: 20px 24px;
                 border-right: none;
-                border-bottom: 1px solid #ddd;
+                border-bottom: 1px solid var(--color-border);
             }
             
             .nav-tab:last-child {
