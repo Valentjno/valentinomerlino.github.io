@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Valentino Merlino - AI Security, Red Teaming, and Responsible AI researcher">
+    <meta name="description" content="Valentino Merlino - AI Security, Responsible AI, and ISO 42001 Governance">
     <meta name="author" content="Valentino Merlino">
-    <title>Valentino Merlino | AI Security & Red Teaming</title>
+    <title>Valentino Merlino | Responsible AI & ISO 42001</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -191,12 +191,8 @@
         }
         
         .header-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-            position: relative;
-            padding-right: 60px;
+            display: block;
+            max-width: 700px;
         }
         
         .header-text h1 {
@@ -245,64 +241,6 @@
             box-shadow: 0 4px 12px rgba(247, 141, 167, 0.2);
         }
         
-        .header-visual {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 300px;
-            animation: fadeInRight 0.8s ease-out;
-            position: relative;
-            overflow: visible;
-        }
-        
-        .hero-image {
-            width: 280px;
-            height: 280px;
-            border-radius: 4px;
-            object-fit: cover;
-            animation: fadeInRight 0.8s ease-out;
-        }
-        
-        .scroll-explore {
-            position: absolute;
-            bottom: -50px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 10;
-        }
-
-        .scroll-anim {
-            font-size: 12px;
-            color: var(--color-text-muted);
-            font-weight: 400;
-            opacity: 0;
-            animation: fadeInUp 0.6s ease-out 0.8s forwards;
-            text-align: center;
-        }
-
-        @keyframes slideInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        @keyframes expandWidth {
-            from {
-                width: 0;
-            }
-            to {
-                width: 80px;
-            }
-        }
-
-        .scroll-anim:hover {
-            color: var(--color-pale-pink);
-        }
         
         .hide-mobile {
             display: block;
@@ -687,16 +625,10 @@
     <header>
         <div class="header-content">
             <div class="header-text">
-                <h1>Hello, I'm Valentino Merlino</h1>
-                <p class="header-intro">AI security researcher | Red teaming | Responsible AI</p>
-                <p class="header-tagline">Building safer AI through rigorous security research and red-teaming</p>
+                <h1>Valentino Merlino</h1>
+                <p class="header-intro">AI Security & Responsible AI Practitioner</p>
+                <p class="header-tagline">Advancing safer AI systems through rigorous security research, red-teaming, and ISO 42001 governance frameworks.</p>
                 <a href="contact.html" class="btn-primary">Get in touch</a>
-            </div>
-            <div class="header-visual">
-                <img src="https://via.placeholder.com/280x280/f2f2f2/000000?text=Professional+Photo" alt="Valentino Merlino - AI Security Researcher" class="hero-image" />
-                <div class="scroll-explore">
-                    <p class="scroll-anim">scroll to explore</p>
-                </div>
             </div>
         </div>
     </header>
@@ -720,42 +652,19 @@
     <!-- Main Content -->
     <main>
         <section>
-            <h2>prologue</h2>
+            <h2>Responsible AI Implementation</h2>
             <div class="section-content">
-                <p>AI security is evolving rapidly. As systems become more powerful and autonomous, understanding their vulnerabilities is not a luxury—it's essential. My work bridges industry practice and academic research to advance how we think about adversarial testing, alignment, and responsible development.</p>
-                <p>I combine red-teaming methodologies with rigorous research to identify gaps in AI safety. This means looking beyond surface-level security and asking the harder questions: What could go wrong? How do we build safety into systems from the start? Where do policy and practice diverge?</p>
+                <p>I specialize in implementing Responsible AI frameworks and governance structures. As an ISO 42001 implementer, I help organizations build AI systems that are secure, transparent, and aligned with ethical standards. My work combines red-teaming, threat modeling, and compliance frameworks to ensure AI safety from development to deployment.</p>
             </div>
         </section>
-        
+
         <section>
-            <h2>research</h2>
+            <h2>Expertise</h2>
             <div class="section-content">
-                <p>My research focuses on adversarial robustness, prompt injection, and the human factors in AI safety. I work at the intersection of security engineering and machine learning, exploring how red-teaming can make AI systems more reliable.</p>
-                <p>I approach each project by integrating classical security thinking with emerging AI concerns. I structure my investigations to surface not just what breaks, but why—and how to prevent it. This allows me to contribute meaningfully across industry work, publications, and my PhD research at the University of Catania.</p>
-            </div>
-        </section>
-        
-        <section>
-            <h2>collaboration</h2>
-            <div class="section-content">
-                <p>I believe security is a conversation. I work closely with teams across different backgrounds—engineers, researchers, policy makers, and industry practitioners—to build shared understanding of AI risks. Clear communication about security concerns is as important as identifying them.</p>
-                <p>Whether advising on threat models, designing red-team exercises, or collaborating on research, I focus on making complex security concepts accessible and actionable. The goal is always to strengthen how we think about AI safety together.</p>
-            </div>
-        </section>
-        
-        <section>
-            <h2>practice</h2>
-            <div class="section-content">
-                <p>Security work is iterative. I stay current with emerging attack vectors, model capabilities, and policy conversations. This means regularly re-evaluating assumptions and adjusting approaches as the landscape shifts.</p>
-                <p>I structure my work around practical questions: How do we measure safety? What does effective red-teaming look like? How do we translate research into practice? Each project reinforces the importance of both theory and pragmatism in AI security.</p>
-            </div>
-        </section>
-        
-        <section>
-            <h2>background</h2>
-            <div class="section-content">
-                <p>I hold a PhD candidacy at the University of Catania, where my research centers on AI security and adversarial testing. Alongside my academic work, I engage in practical security research and red-teaming initiatives in the industry.</p>
-                <p>This combination of research rigor and real-world application shapes how I approach problems. I value both deep theoretical understanding and the ability to deliver concrete insights that matter to teams building AI systems.</p>
+                <p><strong>Adversarial Testing & Red-Teaming:</strong> Identifying vulnerabilities in AI systems before they cause harm.</p>
+                <p><strong>ISO 42001 Governance:</strong> Implementing AI risk management systems and compliance frameworks.</p>
+                <p><strong>Security Research:</strong> PhD research at University of Catania on adversarial robustness and AI safety.</p>
+                <p><strong>OWASP AI Exchange:</strong> Contributing to open security standards for AI systems.</p>
             </div>
         </section>
     </main>
@@ -763,7 +672,7 @@
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <p class="footer-text">Let's talk about AI security.</p>
+            <p class="footer-text">Building safer, more trustworthy AI systems.</p>
             <div class="footer-links">
                 <a href="mailto:valentinomerlino@protonmail.com">email</a>
                 <a href="https://www.linkedin.com/in/valentinomerlino" target="_blank">LinkedIn</a>
