@@ -3,22 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Red-Teaming Work & AI Security Practice - Valentino Merlino">
+    <meta name="description" content="Research & Work - Valentino Merlino | IoT Security, Red-Teaming, AI Safety">
     <meta name="author" content="Valentino Merlino">
-    <title>Work | Valentino Merlino | Red-Teaming & AI Security</title>
-    
+    <title>Research & Work | Valentino Merlino</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
     <style>
         :root {
             --color-black: #000000;
             --color-white: #ffffff;
-            --color-accent-teal: #0d9488;
             --color-pale-pink: #f78da7;
-            --color-accent-deep-blue: #1e40af;
-            --color-vivid-green: #00d084;
             --bg-light: #F2F2F2;
             --bg-dark: #1a1a1a;
             --color-border: #e5e7eb;
@@ -43,10 +40,10 @@
             color: var(--color-black);
             line-height: 1.6;
             font-size: 16px;
-            position: relative;
         }
 
         h1 {
+            font-family: 'Space Mono', monospace;
             font-size: 2.4rem;
             font-weight: 700;
             line-height: 1.2;
@@ -54,9 +51,9 @@
         }
 
         h2 {
+            font-family: 'Space Mono', monospace;
             font-size: 1.5rem;
-            font-weight: 600;
-            line-height: 1.3;
+            font-weight: 700;
             margin-bottom: 1.5rem;
             margin-top: 2rem;
         }
@@ -66,32 +63,21 @@
         }
 
         h3 {
-            font-size: 1rem;
+            font-size: 0.95rem;
             font-weight: 600;
-            margin-bottom: 0.75rem;
+            margin-bottom: 0.5rem;
         }
 
         p {
             font-size: 0.9rem;
             line-height: 1.8;
             margin-bottom: 1rem;
-            text-align: left;
         }
 
         p:last-child {
             margin-bottom: 0;
         }
 
-        a {
-            color: var(--color-black);
-            text-decoration: none;
-            transition: opacity 0.2s ease;
-        }
-
-        a:hover {
-            opacity: 0.7;
-        }
-        
         /* Navigation Header */
         .nav-header {
             padding: 30px 40px;
@@ -112,7 +98,6 @@
         }
 
         .nav-header-logo a {
-            display: inline-block;
             color: var(--color-black);
             text-decoration: none;
         }
@@ -128,7 +113,6 @@
             color: var(--color-black);
             text-decoration: none;
             transition: opacity 0.2s ease;
-            position: relative;
         }
 
         .nav-header-nav a:hover {
@@ -146,9 +130,14 @@
         }
 
         .nav-header-linkedin a {
-            display: inline-flex;
-            align-items: center;
             font-size: 13px;
+            color: var(--color-black);
+            text-decoration: none;
+            transition: opacity 0.2s ease;
+        }
+
+        .nav-header-linkedin a:hover {
+            opacity: 0.6;
         }
 
         @media (max-width: 768px) {
@@ -193,7 +182,6 @@
             font-size: 2.4rem;
             font-weight: 700;
             margin-bottom: 20px;
-            animation: fadeInDown 0.8s ease-out;
         }
 
         .page-subtitle {
@@ -201,9 +189,8 @@
             line-height: 1.7;
             max-width: 600px;
             color: var(--color-text-muted);
-            animation: fadeInUp 0.8s ease-out 0.1s both;
         }
-        
+
         /* Main Content */
         main {
             max-width: 900px;
@@ -217,156 +204,64 @@
 
         section h2 {
             font-size: 1.5rem;
-            font-weight: 600;
+            font-weight: 700;
             margin-bottom: 1.5rem;
             margin-top: 2rem;
-            animation: fadeInLeft 0.8s ease-out backwards;
-        }
-
-        section h2:first-of-type {
-            margin-top: 0;
         }
 
         section p {
             font-size: 0.9rem;
             line-height: 1.8;
             margin-bottom: 1rem;
-            text-align: left;
-            animation: fadeInUp 0.8s ease-out backwards;
         }
-        
-        .project-card {
-            background: var(--wp--preset--color--white);
-            padding: 30px;
-            margin-bottom: 20px;
-            border: 1px solid #e0e0e0;
-            transition: all 0.3s ease;
-            animation: fadeInUp 0.8s ease-out backwards;
+
+        .item {
+            margin-bottom: 24px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--color-border);
         }
-        
-        .project-card:hover {
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-            transform: translateY(-2px);
-            border-color: var(--wp--preset--color--pale-pink);
+
+        .item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
         }
-        
-        .project-card h3 {
-            font-size: 16px;
-            font-weight: 600;
+
+        .item h3 {
+            margin-bottom: 4px;
+        }
+
+        .meta {
+            font-size: 12px;
+            color: var(--color-text-muted);
             margin-bottom: 8px;
         }
-        
-        .project-card .meta {
-            font-size: 12px;
-            color: #666;
-            margin-bottom: 12px;
-        }
-        
-        .project-card p {
+
+        .item p {
             font-size: 13px;
             line-height: 1.7;
-            margin-bottom: 12px;
-            text-align: left;
-            animation: none;
+            margin-bottom: 0;
         }
-        
-        .project-card .tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 15px;
-        }
-        
-        .project-card .tag {
-            font-size: 11px;
-            background: #f0f0f0;
-            padding: 6px 12px;
-            border-radius: 4px;
-            display: inline-block;
-        }
-        
-        section ul {
+
+        ul {
             list-style: none;
             margin-left: 0;
         }
-        
-        section li {
-            font-size: 14px;
+
+        li {
+            font-size: 13px;
             line-height: 1.8;
-            margin-bottom: 12px;
+            margin-bottom: 8px;
             padding-left: 20px;
             position: relative;
-            animation: fadeInUp 0.8s ease-out backwards;
         }
-        
-        section li:before {
+
+        li:before {
             content: "—";
             position: absolute;
             left: 0;
         }
-        
-        /* Animations */
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        @keyframes fadeInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-        
-        .project-card {
-            background: var(--color-white);
-            padding: 30px;
-            margin-bottom: 20px;
-            border: 1px solid #e0e0e0;
-            transition: all 0.3s ease;
-            animation: fadeInUp 0.8s ease-out backwards;
-        }
 
-        .project-card:hover {
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-            transform: translateY(-2px);
-            border-color: var(--color-pale-pink);
-        }
-
-        .project-card:hover h3 {
-            color: var(--color-pale-pink);
-        }
-
-        .project-card .tag {
-            transition: all 0.3s ease;
-        }
-
-        .project-card:hover .tag {
-            background: rgba(247, 141, 167, 0.15);
-            color: var(--color-pale-pink);
-        }
-        
         /* Footer */
         footer {
             background-color: var(--bg-dark);
@@ -406,106 +301,6 @@
         }
 
         @media (max-width: 768px) {
-            footer {
-                padding: 40px 24px;
-            }
-
-            .footer-links {
-                gap: 20px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            footer {
-                padding: 30px 16px;
-            }
-
-            .footer-text {
-                font-size: 14px;
-            }
-
-            .footer-links {
-                gap: 12px;
-                font-size: 11px;
-            }
-        }
-        
-        /* Methodology Grid */
-        .methodologies {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            margin: 30px 0;
-        }
-
-        .methodology-item {
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.7);
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            transition: all 0.3s ease;
-            animation: fadeInUp 0.8s ease-out backwards;
-        }
-
-        .methodology-item:hover {
-            border-color: var(--wp--preset--color--pale-pink);
-            box-shadow: 0 4px 12px rgba(247, 141, 167, 0.1);
-            background-color: rgba(247, 141, 167, 0.04);
-        }
-
-        .methodology-item h4 {
-            font-size: 14px;
-            font-weight: 600;
-            margin-bottom: 10px;
-            color: var(--wp--preset--color--black);
-        }
-
-        .methodology-item p {
-            font-size: 13px;
-            margin-bottom: 0;
-            text-align: left;
-        }
-
-        /* Highlight Box - Responsible AI Connection */
-        .highlight-box {
-            background: linear-gradient(135deg, rgba(247, 141, 167, 0.08) 0%, rgba(247, 141, 167, 0.04) 100%);
-            border: 1px solid rgba(247, 141, 167, 0.3);
-            border-left: 4px solid var(--wp--preset--color--pale-pink);
-            padding: 30px;
-            margin: 40px 0;
-            border-radius: 4px;
-            animation: fadeInUp 0.8s ease-out backwards;
-        }
-
-        .highlight-box h3 {
-            font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 16px;
-            color: var(--wp--preset--color--pale-pink);
-        }
-
-        .highlight-box p {
-            font-size: 14px;
-            margin-bottom: 12px;
-            text-align: justify;
-        }
-
-        .highlight-box p:last-child {
-            margin-bottom: 0;
-        }
-
-        .highlight-box a {
-            color: var(--wp--preset--color--pale-pink);
-            font-weight: 500;
-            text-decoration: underline;
-        }
-
-        .highlight-box a:hover {
-            opacity: 0.8;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
             header {
                 padding: 40px 24px;
             }
@@ -518,24 +313,12 @@
                 padding: 40px 24px;
             }
 
-            .methodologies {
-                grid-template-columns: 1fr;
-            }
-
-            .highlight-box {
-                padding: 24px;
-            }
-
-            .project-card {
-                padding: 20px;
+            footer {
+                padding: 40px 24px;
             }
         }
 
         @media (max-width: 480px) {
-            body {
-                font-size: 14px;
-            }
-
             header {
                 padding: 30px 16px;
             }
@@ -548,36 +331,12 @@
                 padding: 30px 16px;
             }
 
+            footer {
+                padding: 30px 16px;
+            }
+
             section h2 {
                 font-size: 1.25rem;
-            }
-
-            section p {
-                font-size: 0.85rem;
-            }
-
-            .methodologies {
-                grid-template-columns: 1fr;
-            }
-
-            .methodology-item {
-                padding: 16px;
-            }
-
-            .highlight-box {
-                padding: 20px;
-            }
-
-            .highlight-box h3 {
-                font-size: 1rem;
-            }
-
-            .project-card {
-                padding: 16px;
-            }
-
-            .project-card h3 {
-                font-size: 0.9rem;
             }
         }
     </style>
@@ -591,8 +350,7 @@
         <nav class="nav-header-nav">
             <a href="index.html">home</a>
             <a href="about.html">about</a>
-            <a href="work.html" class="active">work</a>
-            <a href="research.html">research</a>
+            <a href="work.html" class="active">research & work</a>
             <a href="contact.html">contact</a>
             <div class="nav-header-linkedin">
                 <a href="https://www.linkedin.com/in/valentinomerlino" target="_blank" title="LinkedIn">LinkedIn ↗</a>
@@ -603,117 +361,59 @@
     <!-- Header -->
     <header>
         <div>
-            <h1 class="page-title">Work</h1>
-            <p class="page-subtitle">Red-teaming, threat assessment, and advancing Responsible AI through security practice.</p>
+            <h1 class="page-title">Research & Work</h1>
+            <p class="page-subtitle">IoT security, red-teaming, and AI safety research.</p>
         </div>
     </header>
-    
+
     <!-- Main Content -->
     <main>
         <section>
-            <h2>Red-Teaming as Responsible AI Practice</h2>
-            <p>Red-teaming is not just a security exercise—it's a fundamental pillar of Responsible AI. By systematically identifying vulnerabilities, edge cases, and failure modes before systems reach production, red-teaming ensures AI systems are more secure, predictable, and aligned with organizational values.</p>
-            <p>My work applies adversarial thinking to every stage of AI development: from initial model evaluation through deployment and monitoring. I develop methodologies that help organizations understand what can go wrong and how to build more resilient systems.</p>
-        </section>
-
-        <!-- Responsible AI Connection -->
-        <section>
-            <div class="highlight-box">
-                <h3>Responsible AI Through Security</h3>
-                <p><strong>Red-teaming advances Responsible AI by making abstract safety principles concrete and measurable.</strong> When we identify a prompt injection vulnerability, test robustness across diverse inputs, or evaluate how a model handles adversarial edge cases, we're not just finding bugs—we're building evidence that systems behave as intended and can be trusted in production.</p>
-                <p>Security research provides the rigorous methodology, empirical evidence, and systematic frameworks that Responsible AI requires. It transforms good intentions into actionable security practices.</p>
+            <h2>Publication</h2>
+            <div class="item">
+                <h3>Energy-based Approach for Attack Detection in IoT Devices: A Survey</h3>
+                <div class="meta">2024 | Internet of Things, Volume 27</div>
+                <p>Machine learning approaches for identifying attacks in IoT devices through energy consumption analysis. Synthesis of current methods for detecting malicious activities on edge systems without signature-based techniques.</p>
             </div>
         </section>
 
         <section>
-            <h2>Red-Teaming Methodologies</h2>
-            <div class="methodologies">
-                <div class="methodology-item">
-                    <h4>Threat Modeling</h4>
-                    <p>Systematic identification of attack surfaces, adversary motivations, and potential exploit paths. Creates structured risk matrices to prioritize security work based on likelihood and impact.</p>
-                </div>
-                <div class="methodology-item">
-                    <h4>Adversarial Testing</h4>
-                    <p>Rigorous evaluation of model robustness through adversarial inputs, prompt injections, jailbreak attempts, and adversarial examples. Tests both targeted attacks and generalized failure modes.</p>
-                </div>
-                <div class="methodology-item">
-                    <h4>Security Frameworks</h4>
-                    <p>Application of established security principles—defense in depth, least privilege, secure by default—to AI system architecture and deployment. Translates theoretical security into practical implementation.</p>
-                </div>
-                <div class="methodology-item">
-                    <h4>Responsible AI Integration</h4>
-                    <p>Embedding security evaluation into responsible AI workflows: fairness testing, bias detection, transparency assessment, and alignment verification. Ensures security and ethics develop together, not in isolation.</p>
-                </div>
+            <h2>Projects</h2>
+            <div class="item">
+                <h3>ISO 42001 Implementation</h3>
+                <div class="meta">2024–2025</div>
+                <p>AI management systems and governance frameworks for organizational compliance and risk assessment.</p>
+            </div>
+            <div class="item">
+                <h3>Red-Teaming & Adversarial Testing</h3>
+                <div class="meta">2023–2025</div>
+                <p>Structured frameworks for identifying vulnerabilities in AI systems. Prompt injection, jailbreak techniques, adversarial robustness evaluation.</p>
+            </div>
+            <div class="item">
+                <h3>PhD Research: Adversarial Robustness & AI Safety</h3>
+                <div class="meta">2022–Present | University of Catania</div>
+                <p>Research on prompt injection vulnerabilities and safety mechanisms in large language models.</p>
             </div>
         </section>
 
         <section>
-            <h2>Recent Projects</h2>
-
-            <div class="project-card">
-                <h3>Adversarial Prompt Injection Framework</h3>
-                <div class="meta">2024–Present</div>
-                <p>Developed a structured methodology for identifying prompt injection vulnerabilities in production AI systems. The framework evaluates model resilience against various attack vectors including multi-language attacks, encoding bypass techniques, and semantic confusion attacks.</p>
-                <div class="tags">
-                    <span class="tag">Security</span>
-                    <span class="tag">Red Teaming</span>
-                    <span class="tag">LLMs</span>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <h3>AI Safety Policy Development</h3>
-                <div class="meta">2023–2024</div>
-                <p>Collaborated with legal and product teams to establish security baselines and safety guidelines for AI deployment. Translated red-teaming findings into governance frameworks, threat models, and incident response protocols for AI-related security events.</p>
-                <div class="tags">
-                    <span class="tag">Policy</span>
-                    <span class="tag">Governance</span>
-                    <span class="tag">Risk Assessment</span>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <h3>Responsible AI Training Program</h3>
-                <div class="meta">2023</div>
-                <p>Designed and delivered training curriculum for engineering teams integrating security practice into responsible AI workflows. Covered threat modeling, adversarial testing methodologies, bias detection, and security-informed model evaluation.</p>
-                <div class="tags">
-                    <span class="tag">Training</span>
-                    <span class="tag">Education</span>
-                    <span class="tag">Responsible AI</span>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <h3>Model Robustness Evaluation</h3>
-                <div class="meta">2022–2023</div>
-                <p>Conducted comprehensive red-teaming assessments for multiple LLM deployments, identifying failure modes, safety issues, and adversarial weaknesses. Results informed model selection decisions and deployment configurations for production systems.</p>
-                <div class="tags">
-                    <span class="tag">Testing</span>
-                    <span class="tag">Evaluation</span>
-                    <span class="tag">Security</span>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2>Core Expertise</h2>
+            <h2>Approach</h2>
             <ul>
-                <li><strong>Red-Teaming Methodology:</strong> Designing and executing systematic adversarial testing exercises that identify vulnerabilities before deployment</li>
-                <li><strong>Threat Modeling:</strong> Identifying attack surfaces, adversary motivations, and potential exploit paths in AI systems</li>
-                <li><strong>Adversarial Testing:</strong> Crafting and executing attacks: prompt injections, jailbreaks, adversarial examples, and robustness evaluation</li>
-                <li><strong>Security Frameworks:</strong> Applying established security principles and architectures to AI system design and deployment</li>
-                <li><strong>Risk Assessment:</strong> Evaluating severity, impact, and mitigation strategies for AI-specific security issues</li>
-                <li><strong>Responsible AI Integration:</strong> Embedding security evaluation into broader responsible AI workflows alongside fairness, transparency, and alignment testing</li>
+                <li>Threat modeling and structured risk assessment</li>
+                <li>Adversarial testing and systematic vulnerability evaluation</li>
+                <li>Security frameworks integrated into AI development</li>
             </ul>
         </section>
 
         <section>
-            <h2>Industries & Collaboration</h2>
-            <p>I work with research organizations, technology companies, and policy bodies on AI security challenges. My collaborations span academic institutions, industry security teams, policy organizations, and community initiatives like OWASP AI Exchange.</p>
-            <p>I'm particularly interested in bridging the gap between security research and responsible AI practice—helping organizations translate threat assessments into concrete security improvements and governance frameworks.</p>
+            <h2>Community</h2>
+            <ul>
+                <li><strong>OWASP AI Exchange</strong> — Threat modeling and AI security guidelines</li>
+                <li><strong>CEN-CENELEC JTC 21</strong> — EU AI standardization and governance frameworks</li>
+            </ul>
         </section>
     </main>
-    
+
     <!-- Footer -->
     <footer>
         <div class="footer-content">
@@ -721,45 +421,9 @@
             <div class="footer-links">
                 <a href="mailto:valentinomerlino@protonmail.com">email</a>
                 <a href="https://www.linkedin.com/in/valentinomerlino" target="_blank">LinkedIn</a>
-                <!-- Update these with your actual social media profiles -->
-                <a href="https://twitter.com" target="_blank">twitter</a>
                 <a href="https://github.com/valentjno" target="_blank">github</a>
             </div>
         </div>
     </footer>
-    
-    <script>
-        // Scroll reveal animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animation = 'fadeInUp 0.8s ease-out forwards';
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-
-        // Observe elements for scroll reveal
-        document.querySelectorAll('section li, .methodology-item, .highlight-box, .project-card').forEach(el => {
-            el.style.opacity = '0';
-            observer.observe(el);
-        });
-
-        // Smooth scroll for navigation
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-        });
-    </script>
 </body>
 </html>
